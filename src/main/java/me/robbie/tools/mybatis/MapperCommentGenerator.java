@@ -13,6 +13,7 @@ import org.mybatis.generator.config.MergeConstants;
 import org.mybatis.generator.internal.util.StringUtility;
 
 import java.util.Properties;
+import java.util.Set;
 
 public class MapperCommentGenerator implements CommentGenerator {
 
@@ -30,12 +31,12 @@ public class MapperCommentGenerator implements CommentGenerator {
      * @param xmlElement
      */
     public void addComment(XmlElement xmlElement) {
-        xmlElement.addElement(new TextElement("<!--"));
+    /*  xmlElement.addElement(new TextElement("<!--"));
         StringBuilder sb = new StringBuilder();
         sb.append("  WARNING - ");
         sb.append(MergeConstants.NEW_ELEMENT_TAG);
         xmlElement.addElement(new TextElement(sb.toString()));
-        xmlElement.addElement(new TextElement("-->"));
+        xmlElement.addElement(new TextElement("-->"));*/
     }
 
     public void addRootComment(XmlElement rootElement) {
@@ -200,4 +201,28 @@ public class MapperCommentGenerator implements CommentGenerator {
      * @param markAsDoNotDelete
      */
     public void addClassComment(InnerClass innerClass, IntrospectedTable introspectedTable, boolean markAsDoNotDelete) {}
+
+    public void addModelClassComment(TopLevelClass topLevelClass, IntrospectedTable introspectedTable) {
+
+    }
+
+    public void addGeneralMethodAnnotation(Method method, IntrospectedTable introspectedTable, Set<FullyQualifiedJavaType> set) {
+
+    }
+
+    public void addGeneralMethodAnnotation(Method method, IntrospectedTable introspectedTable, IntrospectedColumn introspectedColumn, Set<FullyQualifiedJavaType> set) {
+
+    }
+
+    public void addFieldAnnotation(Field field, IntrospectedTable introspectedTable, Set<FullyQualifiedJavaType> set) {
+
+    }
+
+    public void addFieldAnnotation(Field field, IntrospectedTable introspectedTable, IntrospectedColumn introspectedColumn, Set<FullyQualifiedJavaType> set) {
+
+    }
+
+    public void addClassAnnotation(InnerClass innerClass, IntrospectedTable introspectedTable, Set<FullyQualifiedJavaType> set) {
+
+    }
 }
